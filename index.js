@@ -1,8 +1,10 @@
-const API_KEY = "CG-k9JWcePKphd8DqGiccJn4r5s";
+require('dotenv').config()
+
+console.log(process.env.API_KEY)
 
 const options = {
     method: 'GET',
-    headers: {accept: 'application/json', 'x-cg-pro-api-key': API_KEY}
+    headers: {accept: 'application/json', 'x-cg-pro-api-key': process.env.API_KEY}
 };
 
 // Fetches information from CoinGecko's Demo API
